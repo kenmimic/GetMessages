@@ -3,7 +3,7 @@ import requests
 import json
 import urllib2#,urllib2,urllib3,re
 
-url = 'https://dhl2-fw.gbcluster.net/'
+url = ''
 
 #with open('/usr/share/secLists/Discovery/Web-Content/common.txt','r') as folders:
 with open(sys.argv[1],'r') as folders:
