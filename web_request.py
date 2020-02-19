@@ -3,7 +3,7 @@ from colorama import Fore, Back, Style
 
 requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
 
-url = 'https://dhl2-fw.gbcluster.net/'
+url = ''
 keyword = 'Missing Authentication Token'
 
 def now(TimeFormat):
