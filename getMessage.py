@@ -19,3 +19,6 @@ with open(sys.argv[1],'r') as folders:
 	        print response
 	        outfile.close()
 folders.close()
+
+# to add timeout 2 seconds while parsing and timestamp 
+
