@@ -17,8 +17,8 @@ def format_text(title,item):
   text = Style.BRIGHT + Fore.RED + title + Fore.RESET + section_break + item + section_break
   return text;
 
-def ParseURL():
-  with open(sys.argv[1],'r') as folders:
+def ParseURL(wordlist):
+  with open(wordlist,'r') as folders:
     for folder in folders.readlines():
       full_url = url + folder.strip('\n') # strip \n for correct url
       #print full_url
@@ -33,4 +33,13 @@ def ParseURL():
         print format_text('URL is: ',r.url)
         print format_text('TEXT is: ',r.text)
 
-ParseURL()
+def main():
+  if len(sys.argv) != 3:
+    print "(+) usage: %s <wordlist>" % sys.argv[0]
+    print "(+) e.g. %s /usr/share/dirbuster/wordlist/directory-2.3-medium.txt" % sys.argv[0]
+    #sys.exit(-1)
+  wordlist = sys.argv[1]
+  ParseURL(wordlist)
+
+if __name__ == "__main__":
+    main()
